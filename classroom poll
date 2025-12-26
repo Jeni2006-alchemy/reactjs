@@ -1,0 +1,22 @@
+import React, { useState } from &quot;react&quot;;
+function App() {
+const [yesVotes, setYesVotes] = useState(0);
+const [noVotes, setNoVotes] = useState(0);
+return (
+&lt;div style={container}&gt;
+&lt;h2&gt;Task 4: Classroom Poll&lt;/h2&gt;
+&lt;p&gt;Do you understand React?&lt;/p&gt;
+&lt;button onClick={() =&gt; setYesVotes(yesVotes + 1)}&gt;Yes&lt;/button&gt;
+&lt;button onClick={() =&gt; setNoVotes(noVotes + 1)}&gt;No&lt;/button&gt;
+&lt;p&gt;Yes Votes: {yesVotes}&lt;/p&gt;
+&lt;p&gt;No Votes: {noVotes}&lt;/p&gt;
+&lt;/div&gt;
+);
+}
+const container = {
+width: &quot;400px&quot;,
+margin: &quot;50px&quot;,
+padding: &quot;20px&quot;,
+border: &quot;1px solid #ccc&quot;,
+};
+export default App;
