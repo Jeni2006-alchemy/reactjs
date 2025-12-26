@@ -1,0 +1,29 @@
+App.js
+import React, { useState } from &quot;react&quot;;
+function App() {
+const [score, setScore] = useState(0);
+const [answered, setAnswered] = useState(false);
+const handleAnswer = (isCorrect) =&gt; {
+if (!answered) {
+if (isCorrect) setScore(score + 1);
+setAnswered(true);
+}
+};
+return (
+&lt;div style={container}&gt;
+&lt;h2&gt;Task 3: Online Quiz&lt;/h2&gt;
+&lt;p&gt;Which language is used for React?&lt;/p&gt;
+&lt;button onClick={() =&gt; handleAnswer(false)}&gt;Python&lt;/button&gt;
+&lt;button onClick={() =&gt; handleAnswer(true)}&gt;JavaScript&lt;/button&gt;
+&lt;button onClick={() =&gt; handleAnswer(false)}&gt;Java&lt;/button&gt;
+&lt;h3&gt;Score: {score}&lt;/h3&gt;
+&lt;/div&gt;
+);
+}
+const container = {
+width: &quot;400px&quot;,
+margin: &quot;50px&quot;,
+padding: &quot;20px&quot;,
+border: &quot;1px solid #ccc&quot;,
+};
+export default App;
