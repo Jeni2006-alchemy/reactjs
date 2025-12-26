@@ -1,0 +1,40 @@
+App.js
+import React, { useState } from &quot;react&quot;;
+function App() {
+const [feedback, setFeedback] = useState(&quot;&quot;);
+const [feedbackList, setFeedbackList] = useState([]);
+
+const submitFeedback = () =&gt; {
+if (feedback !== &quot;&quot;) {
+setFeedbackList([...feedbackList, feedback]);
+setFeedback(&quot;&quot;);
+}
+};
+return (
+&lt;div style={container}&gt;
+&lt;h2&gt;Task 5: Feedback Form&lt;/h2&gt;
+
+&lt;input
+type=&quot;text&quot;
+placeholder=&quot;Enter your feedback&quot;
+value={feedback}
+onChange={(e) =&gt; setFeedback(e.target.value)}
+/&gt;
+&lt;button onClick={submitFeedback}&gt;Submit&lt;/button&gt;
+
+&lt;ul&gt;
+{feedbackList.map((item, index) =&gt; (
+&lt;li key={index}&gt;{item}&lt;/li&gt;
+))}
+&lt;/ul&gt;
+&lt;/div&gt;
+
+);
+}
+const container = {
+width: &quot;400px&quot;,
+margin: &quot;50px&quot;,
+padding: &quot;20px&quot;,
+border: &quot;1px solid #ccc&quot;,
+};
+export default App;
