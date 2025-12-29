@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Reservation System</title>
+</head>
+<body>
+
+<script>
+    alert("Welcome to Sunrise Hotel!");
+
+    // Get customer name
+    let name = prompt("Enter your name:");
+
+    // Room selection
+    let roomType = prompt(
+        "Select Room Type:\n1. Single Room ($100 per night)\n2. Double Room ($150 per night)\n3. Deluxe Room ($250 per night)\nEnter 1, 2, or 3:"
+    );
+
+    let pricePerNight = 0;
+    let roomName = "";
+
+    if (roomType === "1") {
+        roomName = "Single Room";
+        pricePerNight = 100;
+    } else if (roomType === "2") {
+        roomName = "Double Room";
+        pricePerNight = 150;
+    } else if (roomType === "3") {
+        roomName = "Deluxe Room";
+        pricePerNight = 250;
+    } else {
+        alert("Invalid room selection!");
+    }
+
+    // Number of nights
+    let nights = parseInt(prompt("Enter number of nights:"));
+
+    // Calculate total cost
+    let totalCost = pricePerNight * nights;
+
+    // Confirm reservation
+    let confirmBooking = confirm(
+        "Reservation Details:\n" +
+        "Name: " + name + "\n" +
+        "Room Type: " + roomName + "\n" +
+        "Nights: " + nights + "\n" +
+        "Total Cost: $" + totalCost + "\n\n" +
+        "Confirm booking?"
+    );
+
+    if (confirmBooking) {
+        alert("Thank you, " + name + "! Your reservation is confirmed.");
+    } else {
+        alert("Reservation cancelled.");
+    }
+</script>
+
+</body>
+</html>
