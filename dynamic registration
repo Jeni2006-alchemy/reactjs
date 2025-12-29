@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .form-box, .preview-box {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+            width: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        .preview-box p {
+            margin: 8px 0;
+        }
+
+        .preview-box span {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Online Workshop Registration</h2>
+
+<div class="container">
+
+    <!-- Registration Form -->
+    <div class="form-box">
+        <h3>Registration Form</h3>
+
+        <label>Name</label>
+        <input type="text" id="name" oninput="updatePreview()">
+
+        <label>Email</label>
+        <input type="email" id="email" oninput="updatePreview()">
+
+        <label>Phone</label>
+        <input type="text" id="phone" oninput="updatePreview()">
+
+        <label>Workshop</label>
+        <select id="workshop" onchange="updatePreview()">
+            <option value="">Select Workshop</option>
+            <option>Web D
