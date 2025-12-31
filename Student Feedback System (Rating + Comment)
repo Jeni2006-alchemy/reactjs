@@ -1,0 +1,10 @@
+function Feedback() {
+  const [rating, setRating] = React.useState(5);
+  return (
+    <>
+      <input type="range" min="1" max="5" onChange={e => setRating(e.target.value)} />
+      <textarea placeholder="Comments" />
+      <p>⭐ Rating: {rating}</p>
+    </>
+  );
+}
