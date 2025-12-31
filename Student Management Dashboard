@@ -1,0 +1,8 @@
+function StudentDashboard() {
+  return (
+    <div>
+      <nav>Home | Students | Reports</nav>
+      <h3>Total Students: 120</h3>
+    </div>
+  );
+}
