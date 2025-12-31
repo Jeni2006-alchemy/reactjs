@@ -1,0 +1,11 @@
+function Blog() {
+  const [comments, setComments] = React.useState([]);
+  const addComment = () => setComments([...comments, "New Comment"]);
+
+  return (
+    <>
+      <button onClick={addComment}>Add Comment</button>
+      {comments.map((c, i) => <p key={i}>{c}</p>)}
+    </>
+  );
+}
