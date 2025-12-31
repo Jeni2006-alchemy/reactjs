@@ -1,0 +1,6 @@
+function AuthSystem() {
+  const login = (pwd) => {
+    pwd === "1234" ? alert("✅ Login Success") : alert("❌ Wrong Password");
+  };
+  return <button onClick={() => login("111")}>Login</button>;
+}
