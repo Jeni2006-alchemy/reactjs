@@ -1,0 +1,15 @@
+function EventRegister() {
+  const [name, setName] = React.useState("");
+
+  const handleSubmit = () => {
+    alert(`✅ Registration successful for ${name}`);
+  };
+
+  return (
+    <div>
+      <h3>Event Registration</h3>
+      <input placeholder="Name" onChange={e => setName(e.target.value)} />
+      <button onClick={handleSubmit}>Register</button>
+    </div>
+  );
+}
