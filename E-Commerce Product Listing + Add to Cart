@@ -1,0 +1,10 @@
+function Products() {
+  const [cart, setCart] = React.useState(0);
+  return (
+    <>
+      <h3>Product</h3>
+      <button onClick={() => setCart(cart + 1)}>Add to Cart</button>
+      <p>🛒 Cart: {cart}</p>
+    </>
+  );
+}
