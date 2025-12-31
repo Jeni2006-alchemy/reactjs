@@ -1,0 +1,14 @@
+function ProfileEdit() {
+  const [email, setEmail] = React.useState("");
+  const saveProfile = () => {
+    if (!email.includes("@")) alert("❌ Invalid email");
+    else alert("✅ Profile Updated");
+  };
+
+  return (
+    <div>
+      <input placeholder="Email" onChange={e => setEmail(e.target.value)} />
+      <button onClick={saveProfile}>Save</button>
+    </div>
+  );
+}
